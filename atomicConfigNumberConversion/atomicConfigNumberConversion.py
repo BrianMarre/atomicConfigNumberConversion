@@ -52,20 +52,19 @@ def getConfigNumber(levelVector, atomicNumber):
 
 # tests
 def testGetLevelVector():
-    assert(getLevelVector(11, 6, 10) == np.array((2,3,0,0,0,0,0,0,0,0))), "getLevelVector test failed"
+    assert(np.all(getLevelVector(11, 6, 10) == np.array((2,3,0,0,0,0,0,0,0,0)))), "getLevelVector test failed"
 
 def testGetConfigNumber():
-    assert(getConfigNumber(np.array((2,1,1,0,0,0,0,1,0,0)), 18) == 352973), "getConfigNumber test failed"
+    assert(getConfigNumber(np.array((2,1,1,0,0,0,0,1,0,0)), 18) == 66854705), "getConfigNumber test failed"
     assert(getConfigNumber(np.array((2,3,0,0,0,0,0,0,0,0)), 18) == 11), "getConfigNumber test failed"
     assert(getConfigNumber(np.array((0,1,0,0,0,0,0,0,0,1)), 18) == 24134536956), "getConfigNumber test failed"
 
 def testGetChargeState():
-    assert(getChargeState(352973, 18, 10) == 12), "getChargeState test failed"
-    assert(getChargeState(11, 18, 10) == 12), "getChargeState test failed"
+    assert(getChargeState(66854705, 18, 10) == 13), "getChargeState test failed"
+    assert(getChargeState(11, 18, 10) == 13), "getChargeState test failed"
     assert(getChargeState(24134536956, 18, 10) == 16), "getChargeState test failed"
 
 def testAll():
     testGetConfigNumber()
     testGetLevelVector()
     testGetChargeState()
-
