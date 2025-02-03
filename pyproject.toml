@@ -1,0 +1,12 @@
+[project]
+name = "atomicConfigNumberConversion"
+version = "0.0.1"
+readme = "README.md"
+
+dependencies=[
+    numpy
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
