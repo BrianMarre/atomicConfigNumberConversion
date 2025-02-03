@@ -1,1 +1,1 @@
-from . import atomicConfigNumberConversion
+from .atomicConfigNumberConversion import *
